@@ -115,6 +115,11 @@ function updateLanguage(lang){
 }
 langSelect.onchange=e=>updateLanguage(e.target.value);
 
+// CEK OTOMATIS JIKA SUDAH LOGIN
+if(localStorage.getItem("isLogin") === "true"){
+    location.href = "home.html";
+}
+
 // LOGIN LOGIC
 loginBtn.onclick = ()=>{
     const user = username.value.trim();
@@ -140,7 +145,6 @@ loginBtn.onclick = ()=>{
 registerLink.onclick=()=>location.href="register.html";
 csBtn.onclick=forgotLink.onclick=()=>window.open("https://wa.me/6285373061386");
 </script>
-
 
 </body>
 </html>
